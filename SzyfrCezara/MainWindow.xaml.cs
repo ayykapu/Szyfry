@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -25,6 +26,12 @@ namespace SzyfrCezara
                 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm',
                 'n', 'ń', 'o', 'ó', 'p', 'q', 'r', 's', 'ś', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'ż', 'ź'
             };
+
+        private static bool IsValidFormat(string input)
+        {
+            string pattern = @"(?i)^[aąbcćdeęfghijklłmnńoópqrsśtuvwxyzżź]+(\s[aąbcćdeęfghijklłmnńoópqrsśtuvwxyzżź]+)*$";
+            return Regex.IsMatch(input, pattern);
+        }
 
         public static string Encryption(string input, int shift, bool isRight)
         //true - encryption; false - decryption
@@ -61,14 +68,30 @@ namespace SzyfrCezara
         public void EncryptionButton_Click(object sender, EventArgs e)
         {
             int shift = Convert.ToInt32(EncryptionSlider.Value);
-            encryptionOutput.Text = Encryption(encryptionInput.Text, shift, true);
+
+            if (IsValidFormat(encryptionInput.Text))
+            {
+                encryptionOutput.Text = Encryption(encryptionInput.Text, shift, true);
+            }
+            else
+            {
+                MessageBox.Show("Niewłaściwy format.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         public void DecryptionButton_Click(object sender, EventArgs e)
         {
             int shift = Convert.ToInt32(DecryptionSlider.Value);
-            decryptionOutput.Text = Encryption(decryptionInput.Text, shift, false);
-            Array.Reverse(alphabet);
+          
+            if (IsValidFormat(decryptionInput.Text))
+            {
+                decryptionOutput.Text = Encryption(decryptionInput.Text, shift, false);
+                Array.Reverse(alphabet);
+            }
+            else
+            {
+                MessageBox.Show("Niewłaściwy format.", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
