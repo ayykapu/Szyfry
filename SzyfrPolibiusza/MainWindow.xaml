@@ -1,0 +1,275 @@
+﻿<Window x:Class="PolybiusCypherWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PolybiusCypherWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="AliceBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <TextBlock Text="SZYFROWANIE" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <!--szyfr-->
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Button Name="Random" Margin="5" Content="Generuj klucz" Width="200" Height="50" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="25" Click="RandomButton_Click"/>
+                        <Button Name="DefaultEncryption" Margin="5" Content="Default" Width="200" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Click="DefaultEncryptionButton_Click"/>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox Name="KeyInput0" Grid.Row="0" Grid.Column="0" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput1" Grid.Row="0" Grid.Column="1" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput2" Grid.Row="0" Grid.Column="2" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput3" Grid.Row="0" Grid.Column="3" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput4" Grid.Row="0" Grid.Column="4" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput5" Grid.Row="0" Grid.Column="5" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput6" Grid.Row="0" Grid.Column="6" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+
+                            <TextBox Name="KeyInput7" Grid.Row="1" Grid.Column="0" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput8" Grid.Row="1" Grid.Column="1" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput9" Grid.Row="1" Grid.Column="2" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput10" Grid.Row="1" Grid.Column="3" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput11" Grid.Row="1" Grid.Column="4" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput12" Grid.Row="1" Grid.Column="5" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput13" Grid.Row="1" Grid.Column="6" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+
+                            <TextBox Name="KeyInput14" Grid.Row="2" Grid.Column="0" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput15" Grid.Row="2" Grid.Column="1" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput16" Grid.Row="2" Grid.Column="2" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput17" Grid.Row="2" Grid.Column="3" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput18" Grid.Row="2" Grid.Column="4" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput19" Grid.Row="2" Grid.Column="5" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput20" Grid.Row="2" Grid.Column="6" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+
+                            <TextBox Name="KeyInput21" Grid.Row="3" Grid.Column="0" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput22" Grid.Row="3" Grid.Column="1" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput23" Grid.Row="3" Grid.Column="2" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput24" Grid.Row="3" Grid.Column="3" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput25" Grid.Row="3" Grid.Column="4" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput26" Grid.Row="3" Grid.Column="5" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput27" Grid.Row="3" Grid.Column="6" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+
+                            <TextBox Name="KeyInput28" Grid.Row="4" Grid.Column="0" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput29" Grid.Row="4" Grid.Column="1" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput30" Grid.Row="4" Grid.Column="2" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput31" Grid.Row="4" Grid.Column="3" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput32" Grid.Row="4" Grid.Column="4" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput33" Grid.Row="4" Grid.Column="5" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="KeyInput34" Grid.Row="4" Grid.Column="6" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <TextBox Name="Input" Margin="10" FontSize="25"/>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <DatePicker Name="datePicker" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" IsEnabled="False"/>
+                    </Grid>
+
+                    <Grid Grid.Row="2">
+                        <Button Name="EncryptionButton" Content="SZYFRUJ" Width="260" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Click="EncryptionButton_Click"/>
+
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <TextBox Name="encryptionOutput" Width="489" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" IsReadOnly="True"/>
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="1" Background="GhostWhite">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <TextBlock Text="DESZYFROWANIE" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <!--deszyfr-->
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Button Name="DefaultDecryption" Margin="5" Content="Default" Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" Click="DefaultDecryptionButton_Click"/>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox Name="DecKeyInput0" Grid.Row="0" Grid.Column="0" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput1" Grid.Row="0" Grid.Column="1" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput2" Grid.Row="0" Grid.Column="2" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput3" Grid.Row="0" Grid.Column="3" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput4" Grid.Row="0" Grid.Column="4" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput5" Grid.Row="0" Grid.Column="5" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput6" Grid.Row="0" Grid.Column="6" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+
+                            <TextBox Name="DecKeyInput7" Grid.Row="1" Grid.Column="0" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput8" Grid.Row="1" Grid.Column="1" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput9" Grid.Row="1" Grid.Column="2" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput10" Grid.Row="1" Grid.Column="3" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput11" Grid.Row="1" Grid.Column="4" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput12" Grid.Row="1" Grid.Column="5" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput13" Grid.Row="1" Grid.Column="6" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+
+                            <TextBox Name="DecKeyInput14" Grid.Row="2" Grid.Column="0" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput15" Grid.Row="2" Grid.Column="1" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput16" Grid.Row="2" Grid.Column="2" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput17" Grid.Row="2" Grid.Column="3" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput18" Grid.Row="2" Grid.Column="4" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput19" Grid.Row="2" Grid.Column="5" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput20" Grid.Row="2" Grid.Column="6" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+
+                            <TextBox Name="DecKeyInput21" Grid.Row="3" Grid.Column="0" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput22" Grid.Row="3" Grid.Column="1" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput23" Grid.Row="3" Grid.Column="2" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput24" Grid.Row="3" Grid.Column="3" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput25" Grid.Row="3" Grid.Column="4" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput26" Grid.Row="3" Grid.Column="5" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput27" Grid.Row="3" Grid.Column="6" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+
+                            <TextBox Name="DecKeyInput28" Grid.Row="4" Grid.Column="0" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput29" Grid.Row="4" Grid.Column="1" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput30" Grid.Row="4" Grid.Column="2" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput31" Grid.Row="4" Grid.Column="3" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput32" Grid.Row="4" Grid.Column="4" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput33" Grid.Row="4" Grid.Column="5" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                            <TextBox Name="DecKeyInput34" Grid.Row="4" Grid.Column="6" MaxLength="1" FontSize="25" TextAlignment="Center"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <TextBox Name="DecInput" Margin="10" FontSize="25"/>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <TextBlock Name="info" Text="Wybierz datę zaszyfrowania." VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25"/>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <DatePicker Name="DecDatePicker" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25"/>
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid Grid.Row="2">
+                        <Button Name="DecryptionButton" Content="DESZYFRUJ" Width="260" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Click="DecryptionButton_Click"/>
+
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <TextBox Name="decryptionOutput" Width="489" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" IsReadOnly="True"/>
+
+                </Grid>
+
+            </Grid>
+
+
+        </Grid>
+
+    </Grid>
+</Window>

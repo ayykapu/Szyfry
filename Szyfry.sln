@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SzyfrCezara", "SzyfrCezara\SzyfrCezara.csproj", "{045C983F-03E4-44D7-B5DF-FC4A653E6995}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SzyfrPolibiusza", "SzyfrPolibiusza\SzyfrPolibiusza.csproj", "{E890F6A9-0CEA-4AF2-B743-D3799F99DC34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{045C983F-03E4-44D7-B5DF-FC4A653E6995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{045C983F-03E4-44D7-B5DF-FC4A653E6995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{045C983F-03E4-44D7-B5DF-FC4A653E6995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{045C983F-03E4-44D7-B5DF-FC4A653E6995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E890F6A9-0CEA-4AF2-B743-D3799F99DC34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E890F6A9-0CEA-4AF2-B743-D3799F99DC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E890F6A9-0CEA-4AF2-B743-D3799F99DC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E890F6A9-0CEA-4AF2-B743-D3799F99DC34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35F0A922-6CD8-4534-8B18-A9728C7B426A}
+	EndGlobalSection
+EndGlobal

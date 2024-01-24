@@ -1,0 +1,115 @@
+﻿<Window x:Class="SzyfrCezara.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SzyfrCezara"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="AliceBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <TextBlock Text="SZYFROWANIE" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <TextBlock Name="EncryptionValue" Text="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="13,10,0,0" FontWeight="Bold"/>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Slider Name="EncryptionSlider" Orientation="Vertical" Margin="10,10,0,0" Minimum="0" Maximum="34" Value="0" TickFrequency="1" TickPlacement="BottomRight" ValueChanged="EncryptionSliderSetValue" IsSnapToTickEnabled="True"/>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <TextBox Name="encryptionInput" Margin="15" Width="600" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <Button Name="EncryptionButton" Content="SZYFRUJ" Width="260" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Click="EncryptionButton_Click"/>
+                </Grid>
+
+                <Grid Grid.Column="3">
+                    <TextBox Name="encryptionOutput" Margin="15" Width="600" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" IsReadOnly="True"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
+
+        <Grid Grid.Row="1" Background="GhostWhite">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <TextBlock Text="DESZYFROWANIE" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <TextBlock Name="DecryptionValue" Text="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="13,10,0,0" FontWeight="Bold"/>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Slider Name="DecryptionSlider" Orientation="Vertical" Margin="10,10,0,0" Minimum="0" Maximum="34" Value="0" TickFrequency="1" TickPlacement="BottomRight" ValueChanged="DecryptionSliderSetValue" IsSnapToTickEnabled="True"/>
+                    </Grid>
+                </Grid>
+
+
+
+                <Grid Grid.Column="1">
+                    <TextBox Name="decryptionInput" Margin="15" Width="600" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Grid>
+
+                <Grid Grid.Column="2">
+                    <Button Name="DecryptionButton" Content="DESZYFRUJ" Width="260" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Click="DecryptionButton_Click"/>
+                </Grid>
+
+                <Grid Grid.Column="3">
+                    <TextBox Name="decryptionOutput" Margin="15" Width="600" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" IsReadOnly="True"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
+
+    </Grid>
+</Window>
+
